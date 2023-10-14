@@ -1,0 +1,6 @@
+FROM node:18-alpine
+WORKDIR /app
+ENV PATH /app/node_modules/.bin:$PATH
+COPY . .
+RUN npm ci --silent
+CMD [ "npm", "start" ]
