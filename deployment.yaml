@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment
+  name: depl-react-app
   labels:
     app: react-app
 spec:
@@ -17,5 +17,6 @@ spec:
       containers:
       - name: react-app
         image: leon0408/react-app:latest
+        imagePullPolicy: "Always"
         ports:
         - containerPort: 80
